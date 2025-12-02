@@ -60,8 +60,8 @@ The infrastructure follows best practices for resilience and security, deploying
 
 1.  **Clone the Repository:**
     ```bash
-    git clone <your-repo-url>
-    cd <repo-directory>
+    git clone [https://github.com/Migo205/terraform_iac.git](https://github.com/Migo205/terraform_iac.git)
+    cd terraform_iac
     ```
 
 2.  **Initialize Terraform:**
