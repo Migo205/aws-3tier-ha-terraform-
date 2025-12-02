@@ -1,0 +1,37 @@
+# ---------------------------------------------------------------- #
+# 1. Terraform State and Cache Files (CRITICAL)
+# ---------------------------------------------------------------- #
+# These files contain sensitive state data and should NOT be committed.
+# The state file should be stored remotely (e.g., S3 backend).
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+tfplan
+
+# ---------------------------------------------------------------- #
+# 2. General System Files
+# ---------------------------------------------------------------- #
+.DS_Store          # macOS files
+Thumbs.db          # Windows files
+
+# ---------------------------------------------------------------- #
+# 3. Logs and Environment Secrets
+# ---------------------------------------------------------------- #
+*.log
+*.env
+credentials.json
+# If you are using secrets in a key/value file
+# secrets.tfvars
+
+# ---------------------------------------------------------------- #
+# 4. Large Binary and Archive Files
+# ---------------------------------------------------------------- #
+*.zip
+*.rar
+*.tar
+*.iso
+*.img
+.git
+.terraform
+.terraform.lock.hcl
