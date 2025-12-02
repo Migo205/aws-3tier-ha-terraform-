@@ -1,36 +1,31 @@
-AWS 3-Tier HA Terraform Infrastructure
+# AWS 3-Tier HA Terraform Infrastructure
 A Terraform project for deploying a highly available 3-tier architecture on AWS with auto-scaling, multi-AZ deployment, and secure networking.
 
-Features
-3-Tier Architecture: Web, Application, and Database tiers
+## Features
+* **3-Tier Architecture:** Web, Application, and Database tiers
+* **High Availability:** Multi-AZ deployment across availability zones
+* **Auto Scaling:** Automatic scaling of web and application tiers
+* **Security:** Network segmentation with public/private subnets
+* **Infrastructure as Code:** Complete environment defined in Terraform
 
-High Availability: Multi-AZ deployment across availability zones
+## Quick Start
 
-Auto Scaling: Automatic scaling of web and application tiers
+### Prerequisites
+* Terraform 1.0+
+* AWS CLI configured
+* AWS Account with appropriate permissions
 
-Security: Network segmentation with public/private subnets
-
-Infrastructure as Code: Complete environment defined in Terraform
-
-Quick Start
-Prerequisites
-Terraform 1.0+
-
-AWS CLI configured
-
-AWS Account with appropriate permissions
-
-Deployment
-Clone the repository:
-
-bash
-git clone https://github.com/Migo205/aws-3tier-ha-terraform-.git
+### Deployment
+1. Clone the repository:
+```bash
+git clone [https://github.com/Migo205/aws-3tier-ha-terraform-.git](https://github.com/Migo205/aws-3tier-ha-terraform-.git)
 cd aws-3tier-ha-terraform-
 Configure variables in terraform.tfvars (use terraform.tfvars.example as template)
 
 Initialize and deploy:
 
-bash
+Bash
+
 terraform init
 terraform plan
 terraform apply
@@ -57,7 +52,8 @@ NAT Gateway for private instance internet access
 
 Configuration
 Key Variables
-hcl
+Terraform
+
 aws_region = "us-east-1"
 vpc_cidr = "10.0.0.0/16"
 availability_zones = ["us-east-1a", "us-east-1b"]
@@ -74,9 +70,10 @@ Set backup retention period
 Enable VPC Flow Logs
 
 Project Structure
-text
-├── main.tf              # Main configuration
-├── variables.tf         # Variable definitions
+Plaintext
+
+├── main.tf             # Main configuration
+├── variables.tf        # Variable definitions
 ├── outputs.tf          # Output values
 ├── terraform.tfvars    # Variable values
 ├── modules/            # Reusable modules
@@ -85,14 +82,17 @@ Operations
 Scaling
 Update instance counts in variables and reapply:
 
-bash
+Bash
+
 terraform apply -var="web_instance_count=4"
 Updates
-bash
+Bash
+
 terraform plan
 terraform apply
 Cleanup
-bash
+Bash
+
 terraform destroy
 Outputs
 After deployment, access:
